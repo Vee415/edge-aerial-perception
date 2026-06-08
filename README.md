@@ -342,6 +342,16 @@ SAHI's biggest gains are on the classes that INT8 hurts most -- small and medium
 - **INT8 quantization**: Not viable for YOLOv8n on VisDrone (31.8% mAP drop). A larger model (YOLOv8s) may tolerate INT8 better but hasn't been tested.
 - **Video output codec**: Jetson OpenCV doesn't support XVID in MP4 container; falls back to mp4v (playable in VLC but not all players).
 
+## Dataset
+
+This project uses the **VisDrone** dataset for training and evaluation:
+
+> Zhu, P., Wen, L., Du, D., Fu, X., Hu, Q., & Li, H. (2021). Detection and tracking meet drones challenge. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 44(11), 7380-7399.
+
+- **Dataset**: [VisDrone2019-DET](https://github.com/VisDrone/VisDrone-Dataset) -- 10 classes (pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus, motor)
+- **Training split**: 6,471 images; **Validation split**: 548 images
+- **Key challenge**: Small objects (average ~20px height), dense scenes, aerial perspective
+
 ## Benchmark Reports
 
 Full reports with latency, mAP, memory, and power breakdowns:
