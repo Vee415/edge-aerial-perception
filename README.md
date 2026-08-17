@@ -2,6 +2,8 @@
 
 ![C++ TensorRT inference demo](edge_detection_cpp.gif)
 
+Reference demo video: https://www.youtube.com/watch?v=whzfHgnfYG8
+
 Real-time aerial object detection and tracking pipeline deployed on **NVIDIA Jetson Orin Nano Super** (8GB, JetPack 6.2.1, L4T 35.6, TensorRT 10.3). YOLOv8n trained on VisDrone, exported through ONNX to TensorRT FP16, with SAHI tiling for small object recovery, ByteTrack for multi-object tracking, and a **C++ TensorRT inference binary** for production deployment.
 
 ## Results at a Glance
